@@ -7,7 +7,7 @@ Computing the invariants for a curve with one ramificaiton point of type (2,3) a
 sage: C = SpectralCurve([(2,3),(4,5)]);
 sage: w = C.invariants(3);
 sage: w[(1,2)]
-25/24 Phi[1,1,1,3] dX[1,1] dX[1,1] / F01[1,3]^2 + 3/2 Phi[1,1,1,1] dX[1,3] dX[1,1] / F01[1,3]^2 + 3/2 Phi[1,1,1,1] dX[1,1] dX[1,3] / F01[1,3]^2 - 13/8 F01[1,5] Phi[1,1,1,1] dX[1,1] dX[1,1] / F01[1,3]^3 + 3 Phi[2,2,1,7] dX[2,1] dX[2,1] / F01[2,5]^2 + ...
+25/24 F02[1,1,1,3] dX[1,1] dX[1,1] / F01[1,3]^2 + 3/2 F02[1,1,1,1] dX[1,3] dX[1,1] / F01[1,3]^2 + 3/2 F02[1,1,1,1] dX[1,1] dX[1,3] / F01[1,3]^2 - 13/8 F01[1,5] F02[1,1,1,1] dX[1,1] dX[1,1] / F01[1,3]^3 + 3 F02[2,2,1,7] dX[2,1] dX[2,1] / F01[2,5]^2 + ...
 ```
 ## Release date
 
