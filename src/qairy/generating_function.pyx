@@ -379,13 +379,17 @@ def load_F_for_rs_curve(r, s, chi, include_permutations=True):
                     index = indices[0]
                     for _ in range(power):
                         x_indices.append(index)
-            F_val_dict[(g, n)][tuple(x_indices)] = w * tuple_automorphism_number(x_indices)
+            F_val_dict[(g, n)][tuple(x_indices)] = w * tuple_automorphism_number(
+                x_indices
+            )
 
     if include_permutations:
         for (g, n) in F_val_dict:
             for b in F_val_dict[(g, n)].copy():
                 aut_factor = tuple_automorphism_number(b)
                 for b_perm in multiset_permutations(b):
-                    F_val_dict[(g, n)][tuple(b_perm)] = F_val_dict[(g, n)][b] * aut_factor
+                    F_val_dict[(g, n)][tuple(b_perm)] = (
+                        F_val_dict[(g, n)][b] * aut_factor
+                    )
 
     return F_val_dict
