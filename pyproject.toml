@@ -1,0 +1,22 @@
+[project]
+name = "qairy"
+version = "0.1.0"
+description = "Computes topological recursion via quantum Airy structures."
+license = {file = "LICENSE"}
+authors = [
+    { name = "Greyson Potter", email = "gkp@bu.edu" }
+]
+readme = "README.md"
+requires-python = ">=3.9.2"
+
+[project.urls]
+repository = "https://github.com/gkpotter/qairy"
+
+[build-system]
+requires = ["setuptools", "wheel", "cython"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]
