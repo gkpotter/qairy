@@ -34,13 +34,10 @@ Phi.evaluate({"t": (lambda a, m: a > 0, lambda a, m: 0)})
 C_simple = LocalSpectralCurve(((2, 3),))
 F_simple = C_simple.generating_function(3)
 
-F_simple.evaluate({
-    "F01": lambda a, l: -1 if l == 3 else 0,
-    "F02": lambda a1, a2, l1, l2: 0
-})
-F_simple.change_vars(
-    {"x": lambda a, l: (("x", (l,), 1), 1)}
+F_simple.evaluate(
+    {"F01": lambda a, l: -1 if l == 3 else 0, "F02": lambda a1, a2, l1, l2: 0}
 )
+F_simple.change_vars({"x": lambda a, l: (("x", (l,), 1), 1)})
 
 assert F_simple == RSCurve(2, 3).generating_function(3)
 
@@ -56,5 +53,3 @@ GeneratingFunction().load_from_JSON(2, "./computations/F_rams=((2,3),(2,3))")
 LocalSpectralCurve(((2, 3), (2, 3))).generating_function(2).save_to_txt(
     "./computations/F_rams=((2,3),(2,3))"
 )
-
-
