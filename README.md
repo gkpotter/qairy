@@ -1,4 +1,7 @@
 # qairy
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 qairy is a [SageMath](https://www.sagemath.org/) package written in [Cython](https://cython.org/) (which combines C and Python) for computing topological recursion via higher quantum Airy structures. It can calculate the invariants and generating function from topological recursion for a local spectral curve with arbitrary local data.
 
 ## Installation
