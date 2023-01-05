@@ -41,7 +41,7 @@ class GeneratingFunction:
         F_gn_str = "F[{}, {}] = {}".format(
             g, n, poly_dict_to_str(self.dict[(g, n)], False)
         )
-        filename = "{}{}/F_g={},n={}.txt".format(
+        filename = "{}{}F_g={},n={}.txt".format(
             dirname, "/" if dirname != "" else "", g, n
         )
 
@@ -65,7 +65,7 @@ class GeneratingFunction:
 
             F_data[str(term)] = str(val)
 
-        filename = "{}{}/F_g={},n={}.json".format(
+        filename = "{}{}F_g={},n={}.json".format(
             dirname, "/" if dirname != "" else "", g, n
         )
 
@@ -79,7 +79,7 @@ class GeneratingFunction:
         for x in range(1, chi + 1):
             for g in range((x + 3) // 2):
                 n = x + 2 - 2 * g
-                filename = "{}{}/F_g={},n={}.json".format(
+                filename = "{}{}F_g={},n={}.json".format(
                     dirname, "/" if dirname != "" else "", g, n
                 )
                 self.load_gn_from_JSON(g, n, filename)
