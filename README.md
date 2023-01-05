@@ -37,4 +37,4 @@ sage: F.save_to_txt()
 F polynomial output in plain text at: F_g=0,n=3.txt
 F polynomial output in plain text at: F_g=1,n=1.txt
 ```
-There are a variety of other examples in `examples.sage`.
+There are a variety of other examples in [examples.sage](examples.sage).
