@@ -157,7 +157,7 @@ class LocalSpectralCurve(SageObject):
             if (r, s) not in self._rs_cache:
                 rs_cache_bound = 0
             else:
-                rs_cache_bound = max(2 * g - 2 + n for (g, n) in self._rs_cache[(r, s)])
+                rs_cache_bound = max([2 * g - 2 + n for (g, n) in self._rs_cache[(r, s)]])
 
             max_d = s * chi - 1 - (chi % 2 == 0)
 
